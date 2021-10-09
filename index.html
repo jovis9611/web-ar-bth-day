@@ -3,7 +3,6 @@
 <html>
     <title>little gift</title>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"> </script>    
-    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
     <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
@@ -11,9 +10,9 @@
     <body style='margin : 0px; overflow: hidden;'>
         <a-scene embedded arjs="debugUIEnabled: false;">
             <a-assets>
-                <a-asset-item id="scene" src="./asset/scene.glb"></a-asset-item>
+                <a-asset-item id="scene" src="scene.glb"></a-asset-item>
                 <a-asset-item id="brush" src="./asset/brush.json"></a-asset-item>
-                <!-- <audio id="bday" src="./asset/snowdream.mp3"></audio>  -->
+                <audio id="bday" src="./asset/snowdream.mp3"></audio> 
             </a-assets>
 
             <a-marker preset="hiro">
@@ -22,7 +21,7 @@
                 <a-entity position="-1 0.1 -1"
                 material="color:  #FFC0CB"
                 scale="0.5 0.5 0.5"
-                text-geometry="value: Believe in yourself;font:#brush;"></a-entity>
+                text-geometry="value: Believe in yourself;font:#brush; " sound="src:#bday; autoplay: true; loop: true; on:click"></a-entity>
                     <a-entity position="0 2.25 -15" particle-system="preset: dust;color:#FF92A5,#FFFFFF; particleCount: 10000; size:0.81;"></a-entity>
             </a-marker>
         </a-scene>
