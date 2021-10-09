@@ -1,7 +1,7 @@
 
 <!doctype HTML>
 <html>
-    <title>hello</title>
+    <title>hi</title>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"> </script>    
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
@@ -16,13 +16,14 @@
             </a-assets>
 
             <a-marker preset="hiro">
-                <a-gltf-model  src="#scene" scale="0.0006 0.0006 0.0006">
+                <a-gltf-model  src="#scene" scale="0.0006 0.0006 0.0006" position="0,0,0">
                 </a-gltf-model>
                 <a-entity 
-                material="color:  #FFC0CB"
+                material="color:  #FFC0CB" scale="0.3 0.3 0.3"
                 text-geometry="value: Believe in yourself;font:#brush; " sound="src:#bday; autoplay: true; loop: true; on:click"></a-entity>
                     <a-entity particle-system="preset: dust;color:#FF92A5,#FFFFFF; particleCount: 10000; size:0.81;"></a-entity>
             </a-marker>
+            <a-entity camera></a-entity>
         </a-scene>
     </body>
 </html>
